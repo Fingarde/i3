@@ -27,7 +27,7 @@ sudo modprobe -v rtl8723de ant_sel=2
 cd ../
 rm -r rtlwifi_new
 
-apt install -y build-essential git cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev
+apt install -y build-essential git cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xrm-dev
 wget https://github.com/jaagr/polybar/releases/download/3.4.0/polybar-3.4.0.tar
 tar xvf polybar-3.4.0.tar polybar/
 
@@ -40,10 +40,20 @@ sudo make install -B
 
 cd ../../
 
+#git clone https://github.com/Airblader/xcb-util-xrm
+#cd xcb-util-xrm
+
+#apt install -y autoconf xutils-dev libtool doxygen 
+#git submodule update --init
+#libtoolize
+#sh ./autogen.sh
+
+#cd ../*/
+
 apt install -y alsa-utils
 adduser timothe audio
 
-apt install -y playerctl dunst compton i3 psmisc ksnapshot xinit rxvt rofi xbacklight
+apt install -y playerctl dunst compton i3 psmisc ksnapshot xinit rxvt-unicode rofi xbacklight feh libxcb-xrm-dev firefox-esr
 
 cp -rf bin /home/timothe
 cp -rf .config /home/timothe
@@ -59,3 +69,5 @@ cp *.otf /home/timothe/.local/share/fonts/Apple/OpenType/'SF Mono'
 
 cd ../
 rm -r SF-Mono-Font
+
+chown -R /home/timothe/.local

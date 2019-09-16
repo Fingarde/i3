@@ -101,11 +101,6 @@ type = custom/script
 interval = 1.0
 exec = ~/bin/bat.sh
 
-[module/music]
-type = custom/script
-interval = 1.0
-exec = ~/bin/np.sh
-
 [module/spotipy]
 type = custom/script
 exec =  ~/scripts/spoti.py
