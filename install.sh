@@ -43,7 +43,7 @@ cd ../../
 apt install -y alsa-utils
 adduser fingarde audio
 
-apt install -y playerctl dunst compton i3  psmisc ksnapshot xinit rxvt rofi
+apt install -y playerctl dunst compton i3 psmisc ksnapshot xinit rxvt rofi xbacklight
 
 cp -rf bin /home/fingarde
 cp -rf .config /home/fingarde
