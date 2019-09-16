@@ -49,11 +49,12 @@ cp -rf bin /home/timothe
 cp -rf .config /home/timothe
 cp -f .xinitrc /home/timothe
 cp -f .Xresources /home/timothe
-cp -ef .wall /home/timothe
+cp -rf .wall /home/timothe
 
 git clone https://github.com/ZulwiyozaPutra/SF-Mono-Font
 cd SF-Mono-Font
 
+mkdir -p /home/timothe/.local/share/fonts/Apple/OpenType/'SF Mono'
 cp *.otf /home/timothe/.local/share/fonts/Apple/OpenType/'SF Mono'
 
 cd ../
