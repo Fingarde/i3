@@ -12,7 +12,7 @@ apt install -y xorg
 X -configure
 cp /root/xorg.conf.new /etc/X11/xorg.conf
 
-apt install dkms
+apt install -y dkms
 
 git clone -b extended --single-branch https://github.com/lwfinger/rtlwifi_new.git 
 cd rtlwifi_new
