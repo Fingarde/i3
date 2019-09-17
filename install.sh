@@ -1,4 +1,4 @@
-cd /home/timothe
+cd /home/fingarde
 
 cp /etc/apt/sources.list /etc/apt/old_sources.list
 sed 's/main/main contrib non-free/g' /etc/apt/old_sources.list > /etc/apt/sources.list
@@ -6,7 +6,7 @@ sed 's/main/main contrib non-free/g' /etc/apt/old_sources.list > /etc/apt/source
 apt update && apt upgrade -y
 
 apt install -y sudo
-sudo adduser timothe sudo
+sudo adduser fingarde sudo
 
 apt install -y xorg
 X -configure
@@ -51,23 +51,23 @@ cd ../../
 #cd ../*/
 
 apt install -y alsa-utils
-adduser timothe audio
+adduser fingarde audio
 
 apt install -y playerctl dunst compton i3 psmisc ksnapshot xinit rxvt-unicode rofi xbacklight feh libxcb-xrm-dev firefox-esr
 
-cp -rf bin /home/timothe
-cp -rf .config /home/timothe
-cp -f .xinitrc /home/timothe
-cp -f .Xresources /home/timothe
-cp -rf .wall /home/timothe
+cp -rf bin /home/fingarde
+cp -rf .config /home/fingarde
+cp -f .xinitrc /home/fingarde
+cp -f .Xresources /home/fingarde
+cp -rf .wall /home/fingarde
 
 git clone https://github.com/ZulwiyozaPutra/SF-Mono-Font
 cd SF-Mono-Font
 
-mkdir -p /home/timothe/.local/share/fonts/Apple/OpenType/'SF Mono'
-cp *.otf /home/timothe/.local/share/fonts/Apple/OpenType/'SF Mono'
+mkdir -p /home/fingarde/.local/share/fonts/Apple/OpenType/'SF Mono'
+cp *.otf /home/fingarde/.local/share/fonts/Apple/OpenType/'SF Mono'
 
 cd ../
 rm -r SF-Mono-Font
 
-chown -R /home/timothe/.local
+chown -R /home/fingarde/.local
